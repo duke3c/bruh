@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 
+const port = 3000
+
 const app = express();
 
 app.use(express.urlencoded({extended:true}))
@@ -14,6 +16,6 @@ const bruh = require('./routes/bruh.js')
 app.use('/', index);
 app.use('/bruh', bruh);
 
-app.listen(3000, ()=>{
-    console.log('listening at http://localhost:3000');
+app.listen(port, ()=>{
+    console.log(`listening at http://localhost:${port}`);
 })
