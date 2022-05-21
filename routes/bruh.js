@@ -9,11 +9,11 @@ router.get('/', function (request, response){
 })
 router.post('/', function (request, response){
   console.log(request.body)
-  response.send("done")
+  response.redirect("/bruh/"+request.body.user)
 })
 
 router.get('/:id',(request,response)=>{
-  var data = request.params.id;
+  var data = request.params.id;git rm -rf --cached .
   
   response.render('id.hbs',{
     subject:"bruh",
