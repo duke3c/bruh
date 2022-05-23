@@ -13,7 +13,7 @@ router.post('/', function (request, response){
 })
 
 router.get('/:id',(request,response)=>{
-  var data = request.params.id;git rm -rf --cached .
+  var data = request.params.id;
   
   response.render('id.hbs',{
     subject:"bruh",
