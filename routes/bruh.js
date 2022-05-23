@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/', function (request, response){
   response.render('bruh.hbs',{
-    user:"test",
+    user:"bruh",
     pass:"test"
   })
 })

@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+<!--<link rel="stylesheet" href="bruh.css"></!-->
     <title>
         {{subject}}
     </title>
 </head>
 <body>
-    <div class="container mt-2">
-        <p>username</p>
-        <form action="/bruh" method="post">
-          <input type="text" id="username" name="user" value="{{user}}"><br>
-          <input type="text" id="password" name="pass" value="{{pass}}">
-          <input type="submit">
-        </form>
-    </div>
+    <main class="container">
+        <article class="grid">
+            <div>
+            <hgroup>
+                <h1>sign-in</h1>
+                <h2>to my website idk to write</h2>
+            </hgroup>
+            <form action="/bruh" method="post">
+                <input type="text" id="username" name="user" value="{{user}}"><br>
+                <input type="text" id="password" name="pass" value="{{pass}}">
+                <label for="remember">
+                    <input type="checkbox" role="switch" id="remember" name="remember">
+                     Remember me
+              </label>
+                <input type="submit">
+
+            </form>
+            </div>
+            <div class="bozo"></div>
+        </article>
+    </main>
 </body>
 </html>
