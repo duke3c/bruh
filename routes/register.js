@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose')
 
 const user = require('../models/user.js')
 
@@ -14,12 +15,12 @@ router.get('/', function (request, response){
 })
 router.post('/', function (request, response){
   const acc = new user({
-    user: request.body.user,
     email: request.body.email,
+    user: request.body.user,
     password: request.body.pass
   });
 
-  acc.save().then(() => console.log("One entry added"));
+  acc.save().then(() => response.send('bruh'))
   response.send('works')
 })
 
