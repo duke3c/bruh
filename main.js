@@ -4,6 +4,8 @@ const express = require('express');
 const hbs = require('hbs');
 const mongoose = require('mongoose')
 
+const user = require('./models/user')
+
 const port = 3000
 
 const app = express();
@@ -16,19 +18,14 @@ mongoose
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.log(err));
 
-const USchema = new mongoose.Schema({
-    user: String,
-    password: String
+
+const ubruh = new user({
+    user: 'separete file',
+    email: 'idk@gmail.com',
+    password: 'omg it works bruh'
 });
 
-const User = mongoose.model('User', USchema);
-
-/*const ubruh = new User({
-    user: 'bozo',
-    password: 58
-});*/
-
-//ubruh.save().then(() => console.log("One entry added"));
+ubruh.save().then(() => console.log("One entry added"));
 
 app.use(express.urlencoded({extended:true}))
 

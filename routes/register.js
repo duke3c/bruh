@@ -7,6 +7,7 @@ router.get('/', function (request, response){
     email:"idk",
     pass:"test"
   })
+  console.log(request.body)
 })
 /*router.post('/', function (request, response){
   console.log(request.body)
