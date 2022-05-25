@@ -19,13 +19,13 @@ mongoose
 .catch(err => console.log(err));
 
 
-const ubruh = new user({
-    user: 'separete file',
-    email: 'idk@gmail.com',
-    password: 'omg it works bruh'
-});
+// const ubruh = new user({
+//     user: 'separete file',
+//     email: 'idk@gmail.com',
+//     password: 'omg it works bruh'
+// });
 
-ubruh.save().then(() => console.log("One entry added"));
+// ubruh.save().then(() => console.log("One entry added"));
 
 app.use(express.urlencoded({extended:true}))
 
