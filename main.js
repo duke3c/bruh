@@ -36,9 +36,12 @@ app.set('view engine', 'hbs');
 
 const index = require('./routes/index.js')
 const bruh = require('./routes/bruh.js')
+const register = require('./routes/register.js')
+
 
 app.use('/', index);
 app.use('/bruh', bruh);
+app.use('/register', register)
 
 app.listen(port, ()=>{
     console.log(`listening at http://localhost:${port}`);
