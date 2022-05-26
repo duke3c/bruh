@@ -1,35 +1,42 @@
-<!DOCTYPE html>
 <html data-theme="dark">
-<head>
+  <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-<!--<link rel="stylesheet" href="bruh.css"></!-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <!--<link rel="stylesheet" href="bruh.css"></!-->
     <title>
-        {{subject}}
+      {{subject}}
     </title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="container">
-        <article class="grid">
-            <div>
-            <hgroup>
-                <h1>register</h1>
-                <h2>idk not working now but later</h2>
-            </hgroup>
-            <form action="/bruh" method="post">
-                <input type="text" id="email" name="email" value="{{email}}"><br>
-                <input type="text" id="username" name="user" value="{{user}}"><br>
-                <input type="text" id="password" name="pass" value="{{pass}}">
-                <label for="terms">
-                    <input type="checkbox" id="terms" name="terms">
-                    I agree to the <a>Terms</a> and <a>Conditions</a>
-                </label>
-                <input type="submit">
+      <article class="grid">
+        <div>
+          <hgroup>
+            <h1>register</h1>
+            <h2>idk not working now but later</h2>
+          </hgroup>
+          <form action="/register" method="post">
+            <input type="text" id="email" name="email" value="{{email}}" /><br
+            />
+            <input type="text" id="username" name="user" value="{{user}}" /><br
+            />
+            <input type="text" id="password" name="pass" value="{{pass}}" />
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms" />
+              I agree to the
+              <a>Terms</a>
+              and
+              <a>Conditions</a>
+            </label>
+            <input type="submit" />
 
-            </form>
-            </div>
-            <div class="bozo"></div>
-        </article>
+          </form>
+        </div>
+        <div class="bozo"></div>
+      </article>
     </main>
-</body>
+  </body>
 </html>

@@ -3,11 +3,12 @@ const router = express.Router();
 const mongoose = require('mongoose')
 
 const user = require('../models/user.js')
+var rand = Math.floor(Math.random() * 100);
 
 router.get('/', function (request, response){
   response.render('register.hbs',{
-    user:"bruh",
-    email:"idk",
+    user:rand,
+    email:"idk@gmail.com",
     pass:"test"
   })
   console.log(request.body)
@@ -20,7 +21,7 @@ router.post('/', function (request, response){
     password: request.body.pass
   });
 
-  acc.save().then(() => response.send('bruh'))
+  acc.save().then(() => console.log("one entry sent"))
   response.send('works')
 })
 
