@@ -8,7 +8,7 @@ var rand = Math.floor(Math.random() * 100);
 router.get('/', function (request, response){
   response.render('register.hbs',{
     user:rand,
-    email:"idk@gmail.com",
+    email:`idk${rand}@gmail.com`,
     pass:"test"
   })
   console.log(request.body)
@@ -25,14 +25,8 @@ router.post('/', function (request, response){
   response.send('works')
 })
 
-/*router.get('/:id',(request,response)=>{
-  var data = request.params.id;
-  
-  response.render('id.hbs',{
-    subject:"bruh",
-    datas:data
-  })
-})*/
-
+router.get('/get', function(request, response){
+  response.send('bruh')
+})
 
 module.exports = router;
